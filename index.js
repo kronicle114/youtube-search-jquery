@@ -15,24 +15,21 @@ const getDataFromAPI = (searchTerm, callback) => {
 }
 
 const renderResult = (result, index) => {
-    // console.log(`${index}: ${item.snippet.title}`)
-    // return `<div class='videos' id=\`${index}\`><p>${item.snippet.title}<p></div>`
+   console.log('result: ', result)
     return `
-    <div id=${index}>
-      <h2>
-      Video entitled "${result.snippet.title}" from the ${result.snippet.channelTitle} channel.
-      </h2>
-      <p>Thumbnail goes here:</p>
+    <li id=${index}>
+      <h2>${result.snippet.title}</h2>
+      <p>By: ${result.snippet.channelTitle}</p>
       <a aria-label="${result.snippet.title}" role="link" href="https://www.youtube.com/watch?v=${result.id.videoId}">
       <img src="${result.snippet.thumbnails.medium.url}" alt="${result.snippet.title}"></a>
-    </div>
+    </li>
   `;
 }
 
 const displayYoutubeSearchData = (data) => {
     const results= data.items.map( (item, index) => renderResult(item, index))
     // append data to an existing ul
-    $('.js_search_results').html(results);
+    $('.js_search_results').prepend(results);
 }
 
 const watchSubmit = () => {
