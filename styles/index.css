@@ -1,0 +1,182 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    background: #f4f4f4;
+    height: 100vh;
+    max-width: 100%;
+    width: 100vw;
+    font-family: markpro,Helvetica Neue,helvetica,sans-serif;
+    margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+    vertical-align: baseline;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: auto;
+  }
+  
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  body {
+    display: flex;
+    color: #1D2636;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  table {
+      border-collapse: collapse;
+      border-spacing: 0;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+
+
+/* ======= LINKS ======= */
+a {
+    text-decoration: none;
+    color:#1D2636;
+  }
+  
+a:hover, a:focus {
+    color: #6666e0;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+  
+h2, h3 {
+    font-size: 16px;
+    margin: 8px 0 8px 0;
+    text-align: center;
+}
+  
+form {
+    margin: auto;
+}
+
+.logo_container {
+    margin: auto;
+    padding-top: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:#CC0000;
+    font-size:24px;
+    margin: 8px 0 8px 0;
+    text-align: center;
+}
+
+
+/* ====== SEARCH BOX  ======= */
+
+.js_search_form {
+    margin: auto;
+    padding: 20px;
+    border: none;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.search_box {
+    min-width:300px;
+    min-height: 40px;
+    background: #fafafa;
+}
+
+.submit_button {
+    width: 60px;
+    height: 40px;
+    border: none;
+}
+
+input[type="text"] {
+    font-family: inherit;
+    font-size: 20px;
+    color: rgb(37, 36, 36);
+    text-align: center;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+    font-family: inherit;
+    font-size: 20px;
+    color:rgb(37, 36, 36);
+    text-align: center;
+}
+input[type="text"]::-moz-placeholder {
+    font-family: inherit;
+    font-size: 20px;
+    color: rgb(37, 36, 36);
+    text-align: center;
+
+}
+input[type="text"]::-ms-input-placeholder {
+    font-family: inherit;
+    font-size: 20px;
+    color: rgb(37, 36, 36);
+    text-align: center;
+}
+
+input[type="text"]::placeholder {
+    font-family: inherit;
+    font-size: 20px;
+    color: rgb(37, 36, 36);
+    text-align: center;
+}
+
+/* ======  RESULTS  ======= */
+
+.search_result {
+    border-radius: 8px;
+    margin: 15px auto;
+    max-width: 60%;
+    min-width: 200px;
+    padding: 10px 28px;
+    background: #fafafa;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.1);
+    text-align: start;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 10px;
+}
+
+.image_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.image_container img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}

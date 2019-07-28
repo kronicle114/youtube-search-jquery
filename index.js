@@ -11,17 +11,19 @@ const getDataFromAPI = (searchTerm, callback) => {
     }
 
     $.getJSON(YOUTUBE_SEARCH_URL, query, callback)
-    
 }
 
 const renderResult = (result, index) => {
    console.log('result: ', result)
     return `
-    <li id=${index}>
-      <h2>${result.snippet.title}</h2>
-      <p>By: ${result.snippet.channelTitle}</p>
-      <a aria-label="${result.snippet.title}" role="link" href="https://www.youtube.com/watch?v=${result.id.videoId}">
-      <img src="${result.snippet.thumbnails.medium.url}" alt="${result.snippet.title}"></a>
+    <li id=${index} class='search_result'>
+        <h2>${result.snippet.title}</h2>
+        <p>By: ${result.snippet.channelTitle}</p>
+        <a aria-label="${result.snippet.title}" role="link" href="https://www.youtube.com/watch?v=${result.id.videoId}">
+            <div class="image_container" >
+                <img src="${result.snippet.thumbnails.medium.url}" alt="${result.snippet.title}">
+            </div>
+        </a>
     </li>
   `;
 }

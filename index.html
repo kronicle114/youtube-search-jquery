@@ -11,19 +11,21 @@
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
             crossorigin="anonymous"
         ></script>
-        <link rel="stylesheet" href="index.css" type="text/css">
+        <link rel="stylesheet" href="./styles/index.css" type="text/css">
     </head>
     <body>
-        <h1>Search Youtube</h1>
         <main>
-            <form action="#" class="js_search_form">
-                <label for="search_box">Search:</label>
-                <input type="text" class="search_box" placeholder="type in something">
-                <button class="submit_button" type="submit">Submit</button>
-            </form>
-            <section>
-                <h2>Results:</h2>
-                <!-- unordered list -->
+            <section class="logo_container">
+                <h1>Search Youtube</h1>
+            </section>
+            <section class="search_form_container">
+                <form action="#" class="js_search_form">
+                    <label for="search_box"></label>
+                    <input type="text" class="search_box" placeholder="type in something" aria-label="search box">
+                    <button class="submit_button" type="submit">Submit</button>
+                </form>
+            </section>
+            <section class="results_container">
                 <ul class="js_search_results" aria-live="assertive"> 
                     <!-- results -->
                 </ul>
