@@ -1,33 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Youtube Search</title>
         <meta name="description" content="Youtube Search">
         <meta name="author" content="Trisha Aguinaldo">
-        <link rel="stylesheet" href="index.css" type="text/css">
         <script
             src="https://code.jquery.com/jquery-3.4.1.js"
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
             crossorigin="anonymous"
         ></script>
-
+        <link rel="stylesheet" href="index.css" type="text/css">
     </head>
     <body>
         <h1>Search Youtube</h1>
         <main>
-            <form action="#" id="js_search_form">
+            <form action="#" class="js_search_form">
                 <label for="search_box">Search:</label>
-                <input type="text" id="search_box" placeholder="type in something">
-                <button class="submit_button">Submit</button>
+                <input type="text" class="search_box" placeholder="type in something">
+                <button class="submit_button" type="submit">Submit</button>
             </form>
             <section>
-                <!-- ordered list -->
                 <h2>Results:</h2>
-                <ol id='list' aria-live="assertive"> 
-                    <li class="videos">Placeholder</li> 
-                </ol> 
+                <div class="js_search_results" aria-live="assertive"> </div>
             </section>
         </main>
         <script src="index.js"></script>
